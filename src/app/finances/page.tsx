@@ -34,7 +34,7 @@ export default function FinancesPage() {
           <Card className="text-center px-6 py-6 md:py-10">
             {" "}
             {/* py-6 default, md:py-10 */}
-            <h2 className="text-lg font-semibold text-gray-500 mb-2 uppercase tracking-wider">
+            <h2 className="text-lg font-semibold text-gray-800 mb-2 tracking-wider">
               Revenue
             </h2>
             <p className="text-3xl font-bold text-gray-800">
@@ -46,7 +46,7 @@ export default function FinancesPage() {
           <Card className="text-center px-6 py-6 md:py-10">
             {" "}
             {/* py-6 default, md:py-10 */}
-            <h2 className="text-lg font-semibold text-gray-500 mb-2 uppercase tracking-wider">
+            <h2 className="text-lg font-semibold text-gray-800 mb-2 tracking-wider">
               Expenses
             </h2>
             <p className="text-3xl font-bold text-gray-800">
@@ -59,7 +59,7 @@ export default function FinancesPage() {
 
       {/* Baris Bawah: Card Grafik */}
       <div>
-        <Card title="Revenue and Expenses" className="p-6">
+        <Card title="Revenue and Expenses" className="p-6 text-gray-800 ">
           <MonthlyRevenueExpensesChart />
         </Card>
       </div>

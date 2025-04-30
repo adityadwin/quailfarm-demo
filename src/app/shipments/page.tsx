@@ -67,12 +67,12 @@ export default function ShipmentsPage() {
         </div>
         <div className="bg-white rounded-lg shadow overflow-hidden">
           {/* --- Header Tabel: Sembunyikan di mobile (md kebawah) --- */}
-          <div className="hidden md:grid grid-cols-5 gap-4 items-center py-3 px-4 bg-gray-50 border-b border-gray-200 text-xs font-semibold text-gray-500 uppercase tracking-wider">
+          <div className="hidden md:grid grid-cols-5 gap-4 items-center py-3 px-4 bg-gray-50 border-b border-gray-200 text-xs font-semibold text-gray-900 uppercase tracking-wider">
             <div className="col-span-1 text-center">Shipments</div>
             <div className="col-span-1 text-center">Order</div>
             <div className="col-span-1 text-center">Date</div>
             <div className="col-span-1 text-center">Status</div>
-            <div className="text-center col-span-1">Action</div>
+            <div className="text-center col-span-1"></div>
           </div>
           <div>
             {shipmentsData.length > 0 ? (

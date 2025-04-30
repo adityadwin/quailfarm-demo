@@ -63,12 +63,12 @@ export default function ProductsPage() {
         </div>
         <div className="bg-white rounded-lg shadow overflow-hidden">
           {/* --- Header Tabel: Sembunyikan di mobile (md kebawah) --- */}
-          <div className="hidden md:grid grid-cols-5 gap-4 items-center py-3 px-4 bg-gray-50 border-b border-gray-200 text-xs font-semibold text-gray-500 uppercase tracking-wider">
+          <div className="hidden md:grid grid-cols-5 gap-4 items-center py-3 px-4 bg-gray-50 border-b border-gray-200 text-xs font-semibold text-gray-900 uppercase tracking-wider">
             <div className="text-center col-span-1">Product</div>
             <div className="text-center col-span-1">Description</div>
             <div className="text-center col-span-1">Price</div>
             <div className="text-center col-span-1">Stock</div>
-            <div className="text-center col-span-1">Action</div>
+            <div className="text-center col-span-1"></div>
           </div>
           <div>
             {productsData.length > 0 ? (
@@ -80,7 +80,7 @@ export default function ProductsPage() {
                 />
               ))
             ) : (
-              <div className="text-center py-10 text-gray-500">
+              <div className="text-center py-10 text-gray-900">
                 No products found.
               </div>
             )}

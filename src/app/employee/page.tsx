@@ -63,12 +63,12 @@ export default function EmployeePage() {
         <div className="bg-white rounded-lg shadow overflow-hidden">
           {/* Header Tabel */}
           {/* --- Sembunyikan header di mobile (md ke bawah) --- */}
-          <div className="hidden md:grid grid-cols-5 gap-4 items-center py-3 px-4 bg-gray-50 border-b border-gray-200 text-xs font-semibold text-gray-500 uppercase tracking-wider">
+          <div className="hidden md:grid grid-cols-5 gap-4 items-center py-3 px-4 bg-gray-50 border-b border-gray-200 text-xs font-semibold text-gray-900 uppercase tracking-wider">
             <div className="col-span-1 text-center">Name</div>
             <div className="col-span-1 text-center">Position</div>
             <div className="col-span-1 text-center">Email</div>
             <div className="col-span-1 text-center">Status</div>
-            <div className="text-center col-span-1">Action</div>
+            <div className="text-center col-span-1"></div>
           </div>
 
           {/* Body Tabel (Data Employees) */}

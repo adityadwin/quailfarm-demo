@@ -36,22 +36,22 @@ const ProductRow: React.FC<ProductRowProps> = ({ product, formatCurrency }) => {
 
       {/* Kolom Description */}
       {/* --- Tambahkan label mobile, sesuaikan text-align --- */}
-      <div className="text-sm text-gray-600 md:col-span-1 text-left md:text-center">
-        <span className="font-semibold md:hidden">Description: </span>
+      <div className="text-sm text-gray-900 md:col-span-1 text-left md:text-center">
+        <span className="font-normal md:hidden">Description: </span>
         {product.description}
       </div>
 
       {/* Kolom Price */}
       {/* --- Tambahkan label mobile, sesuaikan text-align --- */}
-      <div className="text-sm text-gray-800 font-medium md:col-span-1 text-left md:text-center">
-        <span className="font-semibold md:hidden">Price: </span>
+      <div className="text-sm text-gray-900 font-medium md:col-span-1 text-left md:text-center">
+        <span className="font-normal md:hidden">Price: </span>
         {formatCurrency(product.price)}
       </div>
 
       {/* Kolom Stock */}
       {/* --- Tambahkan label mobile, sesuaikan text-align --- */}
       <div className="text-sm text-gray-800 font-medium md:col-span-1 text-left md:text-center">
-        <span className="font-semibold md:hidden">Stock: </span>
+        <span className="font-normal md:hidden">Stock: </span>
         {product.stock}
       </div>
 
@@ -60,7 +60,7 @@ const ProductRow: React.FC<ProductRowProps> = ({ product, formatCurrency }) => {
       <div className="md:justify-self-center md:col-span-1 pt-2 md:pt-0 flex justify-end md:justify-center">
         {" "}
         {/* Rata kanan di mobile, center di md+ */}
-        <button className="text-xs border border-gray-300 rounded px-3 py-1 text-gray-600 hover:bg-gray-100 transition-colors">
+        <button className="text-xs border border-gray-300 rounded px-3 py-1 text-gray-900 hover:bg-gray-100 transition-colors">
           Edit
         </button>
       </div>
