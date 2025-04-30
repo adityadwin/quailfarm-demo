@@ -2,7 +2,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import Sidebar from "./components/Sidebar"; // Pastikan path import benar
+import Sidebar from "./components/Sidebar";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -25,10 +25,9 @@ export default function RootLayout({
       <body className={`${poppins.className} bg-[#cbcad1]`}>
         <div className="flex min-h-screen">
           <Sidebar />
-          {/* --- Ubah margin kiri agar responsif --- */}
+
           <main className="flex-1 p-6 md:p-8 ml-20 lg:ml-64 transition-all duration-300">
             {" "}
-            {/* ml-20 default, lg:ml-64 */}
             {children}
           </main>
         </div>

@@ -1,7 +1,6 @@
-// app/shipments/page.tsx
 import React from "react";
 import { FiSearch } from "react-icons/fi";
-import ShipmentRow from "../components/ShipmentRow"; // Pastikan path import benar
+import ShipmentRow from "../components/ShipmentRow";
 
 type ShipmentStatus = "Pending" | "Completed" | "Cancelled";
 const shipmentsData: {
@@ -47,26 +46,20 @@ export default function ShipmentsPage() {
       <h1 className="text-3xl font-bold text-gray-800">Shipments</h1>
       <div className="max-w-5xl space-y-6">
         {" "}
-        {/* Kontainer tetap max-w-5xl, rata kiri */}
-        {/* Baris Atas: Hanya Search Bar (Responsif) */}
-        {/* --- Perbaiki layout search bar agar konsisten --- */}
         <div className="flex">
-          {/* Search Bar */}
           <div className="relative w-full sm:max-w-xl">
             {" "}
-            {/* Lebar penuh di mobile, max-w di sm+ */}
             <span className="absolute inset-y-0 left-0 flex items-center pl-3">
               <FiSearch className="h-5 w-5 text-gray-400" />
             </span>
             <input
               type="text"
-              placeholder="Search shipments" // Placeholder sesuai halaman
+              placeholder="Search shipments"
               className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-[#EAA25D]/50 focus:border-transparent"
             />
           </div>
         </div>
         <div className="bg-white rounded-lg shadow overflow-hidden">
-          {/* --- Header Tabel: Sembunyikan di mobile (md kebawah) --- */}
           <div className="hidden md:grid grid-cols-5 gap-4 items-center py-3 px-4 bg-gray-50 border-b border-gray-200 text-xs font-semibold text-gray-900 uppercase tracking-wider">
             <div className="col-span-1 text-center">Shipments</div>
             <div className="col-span-1 text-center">Order</div>

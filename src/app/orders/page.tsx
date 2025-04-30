@@ -1,7 +1,6 @@
-// app/orders/page.tsx
 import React from "react";
 import { FiSearch } from "react-icons/fi";
-import OrderRow from "../components/OrderRow"; // Pastikan path import benar
+import OrderRow from "../components/OrderRow";
 
 type OrderStatus = "Pending" | "Completed" | "Cancelled";
 const ordersData: {
@@ -47,15 +46,10 @@ export default function OrdersPage() {
       <h1 className="text-3xl font-bold text-gray-800">Orders</h1>
       <div className="max-w-5xl space-y-6">
         {" "}
-        {/* Kontainer tetap max-w-5xl, rata kiri */}
-        {/* Baris Atas: Hanya Search Bar (Responsif) */}
         <div className="flex">
           {" "}
-          {/* Tidak perlu justify-between karena hanya 1 item */}
-          {/* Search Bar */}
           <div className="relative w-full sm:max-w-xl">
             {" "}
-            {/* Lebar penuh di mobile, max-w di sm+ */}
             <span className="absolute inset-y-0 left-0 flex items-center pl-3">
               <FiSearch className="h-5 w-5 text-gray-400" />
             </span>
@@ -67,7 +61,6 @@ export default function OrdersPage() {
           </div>
         </div>
         <div className="bg-white rounded-lg shadow overflow-hidden">
-          {/* --- Header Tabel: Sembunyikan di mobile (md kebawah) --- */}
           <div className="hidden md:grid grid-cols-5 gap-4 items-center py-3 px-4 bg-gray-50 border-b border-gray-200 text-xs font-semibold text-gray-900 uppercase tracking-wider">
             <div className="col-span-1 text-center">Order</div>
             <div className="col-span-1 text-center">Customer</div>

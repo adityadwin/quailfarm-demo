@@ -1,7 +1,5 @@
-// app/components/EmployeeRow.tsx
 import React from "react";
 
-// Tipe Status
 type EmployeeStatus = "Active" | "Inactive";
 
 interface EmployeeRowProps {
@@ -14,7 +12,6 @@ interface EmployeeRowProps {
   };
 }
 
-// Helper styling status badge
 const getStatusStyles = (status: EmployeeStatus) => {
   switch (status) {
     case "Active":
@@ -28,32 +25,21 @@ const getStatusStyles = (status: EmployeeStatus) => {
 
 const EmployeeRow: React.FC<EmployeeRowProps> = ({ employee }) => {
   return (
-    // --- Ubah grid menjadi responsif: 1 kolom default, 5 kolom di md+ ---
-    // --- Sesuaikan padding & gap ---
     <div className="grid grid-cols-1 md:grid-cols-5 gap-y-2 md:gap-4 md:items-center py-3 px-4 bg-white border-b border-gray-200 last:border-b-0">
-      {/* Kolom Name */}
-      {/* --- Sesuaikan text-align --- */}
       <div className="text-sm text-gray-900 font-medium text-left md:text-center">
-        {/* Tidak perlu label untuk kolom pertama */}
         {employee.name}
       </div>
 
-      {/* Kolom Position */}
-      {/* --- Tambahkan label mobile, sesuaikan text-align --- */}
       <div className="text-sm text-gray-900 text-left md:text-center">
         <span className="font-normal md:hidden">Position: </span>
         {employee.position}
       </div>
 
-      {/* Kolom Email */}
-      {/* --- Tambahkan label mobile, sesuaikan text-align --- */}
       <div className="text-sm text-gray-900 text-left md:text-center">
         <span className="font-normal md:hidden">Email: </span>
         {employee.email}
       </div>
 
-      {/* Kolom Status */}
-      {/* --- Tambahkan label mobile, sesuaikan text-align --- */}
       <div className="text-left md:text-center">
         <span className="font-normal md:hidden">Status: </span>
         <span
@@ -65,8 +51,6 @@ const EmployeeRow: React.FC<EmployeeRowProps> = ({ employee }) => {
         </span>
       </div>
 
-      {/* Kolom Edit Button */}
-      {/* --- Atur ulang posisi di mobile --- */}
       <div className="md:justify-self-center pt-2 md:pt-0 flex justify-end md:justify-center">
         <button className="text-xs border border-gray-300 rounded px-3 py-1 text-gray-900 hover:bg-gray-100 transition-colors">
           Edit

@@ -2,18 +2,15 @@
 import Image from "next/image";
 import Card from "./components/Card";
 import OrdersChart from "./components/charts/OrdersChart";
-import FinancesChart from "./components/charts/FinancesChart"; // Pastikan path import benar
+import FinancesChart from "./components/charts/FinancesChart";
 
 export default function DashboardPage() {
   return (
     <div className="space-y-6">
       <h1 className="text-3xl font-bold text-gray-800">Dashboard</h1>
 
-      {/* Baris Card Atas (lg:grid-cols-8) */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-8 gap-6">
-        {/* Card Products (lg:col-span-3) */}
         <Card title="Products" className="flex flex-col lg:col-span-3">
-          {/* ... konten produk ... */}
           <div className="grid grid-cols-2 gap-4 flex-grow">
             <div className="text-center">
               <div className="relative w-full aspect-square mb-2 overflow-hidden rounded">
@@ -40,7 +37,6 @@ export default function DashboardPage() {
           </div>
         </Card>
 
-        {/* Card Orders (lg:col-span-3) */}
         <Card title="Orders" className="lg:col-span-3">
           <div className="grid grid-cols-10 gap-4 items-center">
             <div className="col-span-3">
@@ -60,12 +56,10 @@ export default function DashboardPage() {
           </div>
         </Card>
 
-        {/* Card Shipments (lg:col-span-2, h-28) */}
         <Card
           title="Shipments"
           className="lg:col-span-2 lg:align-self-start h-28 flex flex-col justify-center"
         >
-          {/* ... konten shipments ... */}
           <div className="flex justify-around items-center px-2">
             <div className="text-center">
               <p className="text-xl font-bold text-gray-800">10</p>
@@ -79,9 +73,7 @@ export default function DashboardPage() {
         </Card>
       </div>
 
-      {/* Baris Bawah */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {/* Card Grafik Orders (lg:col-span-2) */}
         <Card className="lg:col-span-2 p-6">
           <OrdersChart />
           <div className="mt-4">
@@ -90,19 +82,14 @@ export default function DashboardPage() {
           </div>
         </Card>
 
-        {/* Kolom Kanan */}
         <div className="md:col-span-1 lg:col-span-1 flex flex-col justify-between">
-          {/* Card Finances */}
-          {/* --- Tambahkan margin bawah responsif --- */}
           <Card title="Finances" className="mb-6 md:mb-0">
             {" "}
-            {/* mb-6 default, md:mb-0 */}
             <FinancesChart />
           </Card>
-          {/* Card Employees */}
+
           <Card title="Employees" className="">
             {" "}
-            {/* Tanpa flex-grow */}
             <div className="flex items-center space-x-5 p-4">
               <div className="relative w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
                 <Image
@@ -119,7 +106,6 @@ export default function DashboardPage() {
             </div>
           </Card>
         </div>
-        {/* Akhir Kolom Kanan */}
       </div>
     </div>
   );

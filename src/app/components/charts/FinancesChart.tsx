@@ -25,18 +25,15 @@ const data = [
 const FinancesChart = () => {
   return (
     <ResponsiveContainer width="100%" height={100}>
-      {/* --- Kurangi margin kanan agar grafik bisa full width --- */}
       <LineChart
         data={data}
         margin={{ top: 5, right: 20, left: -20, bottom: 5 }}
       >
         {" "}
-        {/* right dikurangi signifikan */}
         <CartesianGrid strokeDasharray="3 3" vertical={false} />
         <XAxis dataKey="name" fontSize={10} hide />
         <YAxis fontSize={10} hide />
         <Tooltip contentStyle={{ fontSize: "12px", padding: "4px 8px" }} />
-        {/* Legend tetap di kanan, tapi ruang margin chart dikurangi */}
         <Legend
           layout="vertical"
           verticalAlign="middle"
@@ -51,7 +48,6 @@ const FinancesChart = () => {
           strokeWidth={2}
           name="Income"
         />{" "}
-        {/* Biru Tua */}
         <Line
           type="monotone"
           dataKey="expenses"
@@ -59,7 +55,6 @@ const FinancesChart = () => {
           strokeWidth={2}
           name="Expenses"
         />{" "}
-        {/* Biru Muda (Sky) */}
       </LineChart>
     </ResponsiveContainer>
   );
