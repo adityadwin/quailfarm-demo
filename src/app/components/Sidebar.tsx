@@ -35,7 +35,7 @@ const Sidebar = () => {
       className={`bg-[#FFFDD0] text-[#404040] flex flex-col fixed inset-y-0 left-0 h-screen shadow-lg transition-all duration-300 ease-in-out w-20 lg:w-64 p-4 lg:p-6`}
     >
       {/* Judul Penuh (hanya tampil di lg) */}
-      <div className="hidden lg:block text-2xl font-bold mb-8 text-center text-[#404040]">
+      <div className="hidden lg:block text-2xl font-bold mb-2 text-center p-2 text-[#404040]">
         Cimahpar Quail Farm
       </div>
       {/* Placeholder Logo/Ikon (tampil di bawah lg) */}
